@@ -1,0 +1,88 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  margin-top: 22px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
+.modal-body {
+  padding: 16px;
+  background: #fff;
+  grid-column: 1 / -1;
+  height: fit-content;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-color: #2f2f2f80;
+  opacity: 0.75;
+
+  z-index: 900;
+}
+
+body.modal-open {
+  /* body overflow is hidden to hide main scrollbar when modal window is open */
+  overflow: hidden;
+}
+
+#headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+#exitIcon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#headerTextContainer {
+  margin: auto;
+}
+
+#buttonContainer {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 604px) {
+  #okayButton {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  #okayButton {
+    width: 40%;
+  }
+  #buttonContainer {
+    margin-top: 32px;
+  }
+
+  .modal-body {
+    padding: 24px;
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width: 1444px) {
+  .modal-body {
+    grid-column: 4 / -4;
+  }
+}

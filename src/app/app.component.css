@@ -1,0 +1,33 @@
+#rootContainer {
+  margin-top: 16px;
+}
+
+#addressList {
+  background-color: #f2f2f2;
+  padding: 16px;
+}
+
+@media (min-width: 328px) {
+}
+
+@media (min-width: 604px) {
+}
+
+@media (min-width: 1024px) {
+  #rootContainer {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 1444px) {
+  #addressList {
+    grid-column: 2 / -2;
+  }
+}
+
+@media (min-width: 1696px) {
+  #addressList {
+    grid-column: 3 / -3;
+  }
+}

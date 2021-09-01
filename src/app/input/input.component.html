@@ -1,0 +1,18 @@
+<div
+  class="form-group"
+  [ngClass]="{
+    'has-focus': focused,
+    'is-empty': !control.value,
+    'has-success': control.valid && control.value,
+    'has-error': control.invalid && control.touched
+  }"
+>
+  <label for="{{ formControlName }}">{{ label }}</label>
+  <input
+    type="text"
+    name="{{ formControlName }}"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    [formControl]="control"
+  />
+</div>

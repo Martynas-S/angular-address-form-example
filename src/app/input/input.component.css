@@ -1,0 +1,94 @@
+.form-group {
+  position: relative;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.form-group input[type="text"] {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica;
+  color: #2f2f2f;
+
+  position: relative;
+  width: 100%;
+  background: 0 0;
+  padding-top: 25px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+
+  border-width: 1px;
+  border-radius: 3px;
+  border-color: #ddd;
+  border-style: solid;
+  box-shadow: none;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+.form-group input[type="text"]:focus {
+  outline: 0;
+}
+
+.form-group.has-success:not(.has-focus) input[type="text"] {
+  border-color: #8d8d8d;
+}
+.form-group.has-focus input[type="text"] {
+  border-color: #128eb4 !important;
+}
+
+.form-group label {
+  color: #8d8d8d;
+  font-size: 12px;
+  line-height: 14px;
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.form-group.is-empty:not(.has-focus) label {
+  font-size: 14px;
+  line-height: 16px;
+  top: 19px;
+}
+
+.form-group.has-error label {
+  color: red;
+}
+
+.form-group::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.form-group.has-error::after {
+  left: 0;
+  background: red;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .form-group.is-empty:not(.has-focus) label {
+    font-size: 16px;
+    line-height: 18px;
+    top: 17px;
+  }
+
+  .form-group input[type="text"] {
+    font-size: 16px;
+    line-height: 18px;
+    padding-top: 25px;
+    padding-bottom: 9px;
+  }
+}

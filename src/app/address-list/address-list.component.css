@@ -1,0 +1,17 @@
+.vertically-aligned {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (min-width: 604px) {
+  #newAddressButton {
+    grid-column-end: 7;
+  }
+}
+
+@media (min-width: 1024px) {
+  #newAddressButton {
+    grid-column-end: 5;
+  }
+}

@@ -1,0 +1,77 @@
+<div class="grid">
+  <h4>Neue Adresse</h4>
+
+  <form [formGroup]="addressForm">
+    <div class="grid">
+      <pretty-input
+        label="Vorname"
+        formControlName="firstName"
+        id="firstName"
+      ></pretty-input>
+
+      <pretty-input
+        label="Nachname"
+        formControlName="lastName"
+        id="lastName"
+      ></pretty-input>
+
+      <pretty-input
+        label="Firma oder Zusatz (optional)"
+        formControlName="company"
+        id="company"
+      ></pretty-input>
+
+      <pretty-input
+        label="Straße"
+        formControlName="street"
+        id="street"
+      ></pretty-input>
+
+      <pretty-input
+        label="Nr."
+        formControlName="houseNumber"
+        id="houseNumber"
+      ></pretty-input>
+
+      <pretty-input
+        label="PLZ"
+        formControlName="postCode"
+        id="postCode"
+      ></pretty-input>
+
+      <pretty-input label="Ort" formControlName="city" id="city"></pretty-input>
+
+      <div
+        class="select"
+        id="country"
+        [ngClass]="{
+          'is-empty': !addressForm.controls['country'].value,
+          'has-success':
+            addressForm.controls['country'].valid &&
+            addressForm.controls['country'].value,
+          'has-error':
+            addressForm.controls['country'].invalid &&
+            addressForm.controls['country'].touched
+        }"
+      >
+        <select id="standard-select" formControlName="country">
+          <option value="" disabled selected hidden>Land</option>
+          <option *ngFor="let country of countries" [value]="country">
+            {{ country }}
+          </option>
+        </select>
+        <div>
+          <img src="../../assets/Arrow.svg" class="icon" id="selectArrow" />
+        </div>
+      </div>
+
+      <pretty-input
+        label="Telefonnummer (empfohlen)"
+        formControlName="phoneNumber"
+        id="phoneNumber"
+      ></pretty-input>
+    </div>
+  </form>
+
+  <button (click)="onSaveButtonPress()" id="saveButton">Speichern</button>
+</div>

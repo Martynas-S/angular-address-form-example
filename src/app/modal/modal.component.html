@@ -1,0 +1,27 @@
+<div class="modal grid">
+  <div class="modal-body">
+    <div id="headerContainer">
+      <div id="headerTextContainer">
+        <h3>Adresse gespeichert</h3>
+      </div>
+      <div class="icon" id="exitIcon">
+        <img src="../../assets/Exit.svg" class="icon" (click)="close()" />
+      </div>
+    </div>
+
+    <div *ngIf="address">
+      <p>{{ address.firstName }} {{ address.lastName }}</p>
+      <p *ngIf="address.company">{{ address.company }}</p>
+      <p>{{ address.street }} {{ address.houseNumber }}</p>
+      <p>{{ address.postCode }} {{ address.city }}</p>
+      <p>
+        {{ address.country }}
+      </p>
+    </div>
+
+    <div id="buttonContainer">
+      <button id="okayButton" (click)="close()">Okay</button>
+    </div>
+  </div>
+</div>
+<div class="modal-background"></div>

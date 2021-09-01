@@ -1,0 +1,201 @@
+#street {
+  grid-row: 4;
+  grid-column-end: 10;
+}
+
+#houseNumber {
+  grid-row: 4;
+  grid-column: 10 / -1;
+}
+
+#postCode {
+  grid-row: 5;
+  grid-column-end: 4;
+}
+
+#city {
+  grid-row: 5;
+  grid-column: 4 / -1;
+}
+
+@media (min-width: 604px) {
+  #firstName {
+    grid-column-end: 7;
+  }
+
+  #lastName {
+    grid-column: 7 / -1;
+  }
+
+  #company {
+    grid-column-end: 7;
+  }
+
+  #street {
+    grid-row: 3;
+    grid-column-end: 7;
+  }
+
+  #houseNumber {
+    grid-row: 3;
+    grid-column: 7 / span 2;
+  }
+
+  #postCode {
+    grid-row: 4;
+    grid-column-end: 7;
+  }
+
+  #city {
+    grid-row: 4;
+    grid-column: 7 / -1;
+  }
+
+  #country {
+    grid-column-end: 7;
+  }
+
+  #phoneNumber {
+    grid-column: 7 / -1;
+  }
+
+  #saveButton {
+    grid-column-end: 7;
+  }
+}
+
+@media (min-width: 1024px) {
+  #firstName {
+    grid-column-end: 5;
+  }
+
+  #lastName {
+    grid-column: 5 / span 4;
+  }
+
+  #company {
+    grid-column-end: 5;
+  }
+
+  #street {
+    grid-column-end: 5;
+  }
+
+  #houseNumber {
+    grid-column: 5 / span 1;
+  }
+
+  #postCode {
+    grid-column-end: 5;
+  }
+
+  #city {
+    grid-column: 5 / span 4;
+  }
+
+  #country {
+    grid-column-end: 5;
+  }
+
+  #phoneNumber {
+    grid-column: 5 / span 4;
+  }
+
+  #saveButton {
+    grid-column-end: 5;
+  }
+}
+
+@media (min-width: 1696px) {
+  #houseNumber {
+    grid-column: 5 / span 4;
+  }
+}
+
+/* Styling the country select input */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Remove default select styles */
+select {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica;
+  color: #2f2f2f;
+
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
+}
+
+.select {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.select.has-success:not(.has-focus) {
+  border-color: #8d8d8d;
+}
+
+.is-empty select {
+  color: #8d8d8d;
+}
+
+.has-error select {
+  color: red;
+}
+
+#country {
+  position: relative;
+}
+
+.select::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.select.has-error::after {
+  left: 0;
+  background: red;
+  width: 100%;
+}
+
+#selectArrow {
+  justify-self: end;
+  width: 16px;
+  height: 16px;
+  transform: rotate(180deg);
+}
+
+@media (min-width: 1024px) {
+  select {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="grid">
+  <h3 class="vertically-aligned">
+    <div class="icon">
+      <img src="../../assets/Arrow.svg" class="icon" />
+    </div>
+    Adressen
+  </h3>
+
+  <div *ngFor="let address of addresses$ | async; index as i">
+    <address-details [address]="address" [addressIndex]="i"></address-details>
+    <hr />
+  </div>
+
+  <button
+    *ngIf="!newAddressFormIsOpen; else newAddressForm"
+    (click)="openNewAddressForm()"
+    id="newAddressButton"
+  >
+    + Neue Adresse hinzufügen
+  </button>
+
+  <ng-template #newAddressForm>
+    <address-form (onSave)="closeNewAddressForm()"></address-form>
+  </ng-template>
+</div>

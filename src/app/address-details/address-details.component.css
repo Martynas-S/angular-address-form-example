@@ -1,0 +1,64 @@
+#addressDetailsItem {
+  grid-row: 1;
+  grid-column: col-start / -2;
+}
+
+#editIcon {
+  grid-row: 1;
+  grid-column: -1 / -1;
+}
+
+#deleteButton {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  color: black;
+}
+
+#checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="checkbox"] {
+  margin: 0px;
+}
+
+@media (min-width: 328px) {
+}
+
+@media (min-width: 604px) {
+  #addressDetailsItem {
+    grid-column: col-start / span 4;
+  }
+
+  #editIcon {
+    grid-column: 5 / span 1;
+  }
+
+  #checkboxContainer {
+    grid-row: 1;
+    grid-column: 7 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  #addressDetailsItem {
+    grid-column: col-start / span 3;
+  }
+
+  #editIcon {
+    grid-column: 4 / span 1;
+  }
+
+  #checkboxContainer {
+    grid-column: 5 / -1;
+  }
+}
+
+@media (min-width: 1444px) {
+}
+
+@media (min-width: 1696px) {
+}
